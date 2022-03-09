@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const myCarousel = document.getElementById('myCarousel')
+
 
 
 

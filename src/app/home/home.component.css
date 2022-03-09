@@ -13,27 +13,29 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
+
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+/* Filtering table demo */
+
+
+ngb-carousel .picsum-img-wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 55%; /* Keep ratio for 900x500 images */
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: #777;
-}
-.carousel-item > img {
+ngb-carousel .picsum-img-wrapper>img {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: 32rem;
+  bottom: 0;
+  right: 0;
+  height: 70%;
+  width: 100%;
 }
+
+/* Declare heights because of positioning of img element */
+
 
 
 /* MARKETING CONTENT
