@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col image container">
+      <div class="col">
+        <img src="assets/img/IMG_9905.PNG" height="400px" width="500px" alt="login pic">
+      </div>
+    </div>
+
+
+    <div class="col">
+
+      <div class="login-text">
+        <h2> Veuillez vous connecter </h2>
+      </div>
+
+      <div class="form-container">
+
+        <form [formGroup]="loginForm" (submit)="submit()">
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password">
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Se Connecter</button>
+          <button mat-raised-button color="accent" routerLink="signUp" >Creer son compte</button>
+        </form>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

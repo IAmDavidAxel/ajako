@@ -1,0 +1,62 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col">
+
+      <div class="sign-up-text">
+        <h2>Veuillez entrer les informations nécessaires a la création de votre compte</h2>
+      </div>
+
+      <div class="form-container">
+
+        <form   [formGroup]="signUpForm" (submit)="submit()" >
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input matInput formControlName="lastName" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Prenom</mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Adresse</mat-label>
+            <input matInput formControlName="address" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Numero de telephone</mat-label>
+            <input matInput formControlName="phoneNumber" required>
+          </mat-form-field>
+
+          <input matInput [matDatepicker]="picker" placeholder="Date de naissance"
+          formControlName="dateOfBirth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput formControlName="password" required>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Créer compte</button>
+          <button mat-raised-button color="accent" routerLink="signUp"  type="button">Annuler</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

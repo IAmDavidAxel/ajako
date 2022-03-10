@@ -1,0 +1,14 @@
+
+.login-text{
+  margin-left: 20%;
+  margin-top: 40px;
+}
+.form-container{
+  width: 400px;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+
+.form-field{
+  display: block;
+}
