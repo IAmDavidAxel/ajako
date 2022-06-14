@@ -14,6 +14,7 @@ body{
 
 body{
   font-family: "Comic Sans MS";
+  scroll-behavior: smooth;
 }
 
 body{

@@ -8,6 +8,23 @@ body {
   color: #5a5a5a;
 }
 
+.container-xxl{
+
+}
+
+.first_section{
+  padding-top: 2rem;
+  background-image: url("../../assets/img/new pics/DSC-0149.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: repeat;
+
+}
+
+.display_text{
+  background: aliceblue;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -45,6 +62,7 @@ ngb-carousel .picsum-img-wrapper>img {
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
+  transform: translatex(90%);
 }
 .marketing h2 {
   font-weight: 400;
@@ -67,6 +85,7 @@ ngb-carousel .picsum-img-wrapper>img {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
+
 }
 
 
