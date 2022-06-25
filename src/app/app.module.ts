@@ -19,6 +19,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { CartComponent } from './cart/cart.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ProductPageComponent } from './product-page/product-page.component';
     LoginComponent,
     ShopComponent,
     CartComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProfileComponent,
+    CheckoutComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

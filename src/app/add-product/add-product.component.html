@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col">
+      <div class="form__text">
+        Veuillez entrer les informations necessaire a la creation d'un nouveau produit
+      </div>
+    </div>
+
+    <div class=" form_container">
+
+      <form [formGroup]="ProductCreationForm">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Category</mat-label>
+          <input matInput formControlName="category" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Quantity</mat-label>
+          <input matInput formControlName="quantity" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Ajouter</button>
+        <button mat-raised-button color="accent" routerLink="signUp"  type="button">Annuler</button>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
