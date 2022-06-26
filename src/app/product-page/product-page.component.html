@@ -27,4 +27,27 @@
 
   </div>
 
+  <div class=" row review__container">
+
+    <div >
+      <h2>Ecrivez une review du produit</h2>
+    </div>
+
+     <form [formGroup]="ReviewForm" >
+       <mat-form-field class="form-field" appearance="outline">
+         <mat-label>Nom d'utilisateur</mat-label>
+         <input matInput formControlName="username" required>
+       </mat-form-field>
+
+       <mat-form-field class="form-field" appearance="outline">
+         <mat-label>review</mat-label>
+         <input matInput formControlName="review" required>
+       </mat-form-field>
+
+       <button mat-raised-button color="primary" type="submit">Ajouter Review</button>
+       <button mat-raised-button color="accent" routerLink="signUp"  type="button">Annuler</button>
+     </form>
+
+  </div>
+
 </div>

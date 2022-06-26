@@ -5,10 +5,13 @@
 }
 .form-container{
   width: 400px;
-  margin: 0px auto;
-  margin-top: 50px;
+  margin: 50px auto 0px;
 }
 
 .form-field{
   display: block;
+}
+
+button{
+  margin: 10px;
 }
