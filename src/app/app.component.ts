@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {TokenStorageService} from "./token-storage.service";
 
 
 @Component({
@@ -10,14 +11,33 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'ajako';
 
+  private roles: string[];
+  isLoggedIn = false;
+  showAdminBoard= false;
+  showClientBoard = false;
+  username: string;
+
+  constructor(private tokenStorageService: TokenStorageService) {
+  }
+
 
   ngOnInit(): void {
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-    const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
 
-   toggleButton.addEventListener('click', ()=>{
-     navbarLinks.classList.toggle('active')
-   })
+    if (this.isLoggedIn){
+      const user = this.tokenStorageService.getUser();
+      this.roles  = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showClientBoard = this.roles.includes('ROLE_CLIENT');
+
+      this.username = user.displayName;
+    }
+  }
+
+  logout(): void{
+    this.tokenStorageService.signOut();
+    window.location.reload();
   }
 
 

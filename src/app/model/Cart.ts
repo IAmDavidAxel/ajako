@@ -1,7 +1,7 @@
-import {Product} from "./Product";
+import {Products} from "./Products";
 
 export class Cart {
-  products: Product[];
+  products: Products[];
   quantity: number;
   totalPrice: number;
 }

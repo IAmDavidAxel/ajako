@@ -1,9 +1,11 @@
-<h1>Bonjour Aja</h1>
+<div class="container" *ngIf="currentUser; else loggedOut">
 
-<div class="container">
-
-  <div class="row">
-    <h3>Ici vous trouverer l'historique de vos achats</h3>
+  <div>
+    <h6 class="text-muted py-5">
+      <strong>{{currentUser.displayName}}</strong> Profile
+    </h6>
   </div>
 
 </div>
+
+<ng-template #loggedOut> Please login.</ng-template>
